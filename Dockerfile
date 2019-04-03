@@ -1,6 +1,8 @@
 FROM debian:9.5
 RUN apt-get update && apt-get install -y \
 build-essential \
+nodejs \
+nodejs-dev \
 ruby \
 ruby-dev \
 python3-dev \
