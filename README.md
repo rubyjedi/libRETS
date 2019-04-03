@@ -5,6 +5,7 @@ Platform :
 OS - Debian 9.5
 
 Configured Language Bindings:
+NodeJS 11,
 Python 3, 
 Ruby 2.4
 
