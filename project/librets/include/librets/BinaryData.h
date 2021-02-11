@@ -82,7 +82,7 @@ class BinaryData
     std::string mData;
 };
 
-typedef std::auto_ptr<BinaryData> BinaryDataAPtr;
+typedef std::unique_ptr<BinaryData> BinaryDataAPtr;
 
 }
 

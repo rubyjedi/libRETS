@@ -504,7 +504,7 @@ SearchRequestAPtr CLASS::CreateSearchRequest(string searchType,
     if (!mLoggedIn)
         throw RetsException("You are not logged in");
         
-    std::auto_ptr<SearchRequest> searchRequest(
+    std::unique_ptr<SearchRequest> searchRequest(
         new SearchRequest(searchType, searchClass, query));
     if (mDetectedRetsVersion == RETS_1_0)
     {
@@ -912,7 +912,7 @@ UpdateRequestAPtr CLASS::CreateUpdateRequest(string resourceName,
     if (!mLoggedIn)
         throw RetsException("You are not logged in");
         
-    std::auto_ptr<UpdateRequest> updateRequest(
+    std::unique_ptr<UpdateRequest> updateRequest(
         new UpdateRequest(resourceName, className));
     return updateRequest;
 }

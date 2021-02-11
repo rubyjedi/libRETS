@@ -40,11 +40,11 @@ typedef boost::shared_ptr<std::iostream> iostreamPtr;
 typedef boost::shared_ptr<std::ofstream> ofstreamPtr;
 
 /** An auto_ptr to a standard input stream. */
-typedef std::auto_ptr<std::istream> istreamAPtr;
+typedef std::unique_ptr<std::istream> istreamAPtr;
 /** An auto_ptr to a standard output stream. */
-typedef std::auto_ptr<std::ostream> ostreamAPtr;
+typedef std::unique_ptr<std::ostream> ostreamAPtr;
 /** An auto_ptr to a standard input/output stream. */
-typedef std::auto_ptr<std::iostream> iostreamAPtr;
+typedef std::unique_ptr<std::iostream> iostreamAPtr;
 
 /** A key/value map using strings. */
 typedef std::map<std::string, std::string> StringMap;

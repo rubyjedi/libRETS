@@ -574,9 +574,9 @@ class SearchRequest
     void SetRestrictedIndicator(std::string restrictedIndicator);
     void SetPayload(std::string payload);
 };
-typedef std::auto_ptr<SearchRequest> SearchRequestAPtr;
+typedef std::unique_ptr<SearchRequest> SearchRequestAPtr;
 #ifndef SWIGPHP
-%template(SearchRequestAPtr) std::auto_ptr<SearchRequest>;
+%template(SearchRequestAPtr) std::unique_ptr<SearchRequest>;
 #endif
 
 #ifdef SWIGCSHARP
@@ -665,7 +665,7 @@ typedef std::auto_ptr<SearchRequest> SearchRequestAPtr;
             void Copy(unsigned char buffer[], int length) const; 
     };
 
-    typedef std::auto_ptr<BinaryData> BinaryDataAPtr;
+    typedef std::unique_ptr<BinaryData> BinaryDataAPtr;
     SWIG_AUTO_PTR_RELEASE(BinaryData);
 
     %typemap(javacode) SearchResultSet %{
@@ -687,7 +687,7 @@ typedef std::auto_ptr<SearchRequest> SearchRequestAPtr;
             void Copy(unsigned char *buffer, int length) const; 
     };
 
-    typedef std::auto_ptr<BinaryData> BinaryDataAPtr;
+    typedef std::unique_ptr<BinaryData> BinaryDataAPtr;
     SWIG_AUTO_PTR_RELEASE(BinaryData);
 #endif
 
@@ -728,9 +728,9 @@ class SearchResultSet
     }
 #endif
 };
-typedef std::auto_ptr<SearchResultSet> SearchResultSetAPtr;
+typedef std::unique_ptr<SearchResultSet> SearchResultSetAPtr;
 #ifndef SWIGPHP
-%template(SearchResultSetAPtr) std::auto_ptr<SearchResultSet>;
+%template(SearchResultSetAPtr) std::unique_ptr<SearchResultSet>;
 #endif
 
 SWIG_AUTO_PTR_RELEASE(SearchRequest);
@@ -773,9 +773,9 @@ class UpdateRequest
     
     void SetWarningResponse(std::string warningNumber, std::string userResponse);
 };
-typedef std::auto_ptr<UpdateRequest> UpdateRequestAPtr;
+typedef std::unique_ptr<UpdateRequest> UpdateRequestAPtr;
 #ifndef SWIGPHP
-%template(UpdateRequestAPtr) std::auto_ptr<UpdateRequest>;
+%template(UpdateRequestAPtr) std::unique_ptr<UpdateRequest>;
 #endif
 
 class UpdateResponse 
@@ -824,9 +824,9 @@ class UpdateResponse
     void SetEncoding(EncodingType encoding);
 };
 
-typedef std::auto_ptr<UpdateResponse> UpdateResponseAPtr;
+typedef std::unique_ptr<UpdateResponse> UpdateResponseAPtr;
 #ifndef SWIGPHP
-%template(UpdateResponseAPtr) std::auto_ptr<UpdateResponse>;
+%template(UpdateResponseAPtr) std::unique_ptr<UpdateResponse>;
 #endif
 
 SWIG_AUTO_PTR_RELEASE(UpdateRequest);
@@ -839,9 +839,9 @@ class LogoutResponse
     std::string GetLogoutMessage();
     int GetConnectTime();
 };
-typedef std::auto_ptr<LogoutResponse> LogoutResponseAPtr;
+typedef std::unique_ptr<LogoutResponse> LogoutResponseAPtr;
 #ifndef SWIGPHP
-%template(LogoutResponseAPtr) std::auto_ptr<LogoutResponse>;
+%template(LogoutResponseAPtr) std::unique_ptr<LogoutResponse>;
 #endif
 
 SWIG_AUTO_PTR_RELEASE(LogoutResponse);
@@ -850,7 +850,7 @@ SWIG_AUTO_PTR_RELEASE(LogoutResponse);
  * GetObject
  ***************************************************************************/
 
-typedef std::auto_ptr<InputStreamBridge> InputStreamBridgeAPtr;
+typedef std::unique_ptr<InputStreamBridge> InputStreamBridgeAPtr;
 SWIG_AUTO_PTR_RELEASE(InputStreamBridge);
 
 
@@ -966,7 +966,7 @@ class BinaryData
         const char * AsChar() const;
         void Copy(unsigned char buffer[], int length) const; 
 };
-typedef std::auto_ptr<BinaryData> BinaryDataAPtr;
+typedef std::unique_ptr<BinaryData> BinaryDataAPtr;
 SWIG_AUTO_PTR_RELEASE(BinaryData);
 
 %typemap(cscode) ObjectDescriptor %{
@@ -1115,7 +1115,7 @@ class GetObjectResponse
     std::string GetErrorText();
     
 };
-typedef std::auto_ptr<GetObjectResponse> GetObjectResponseAPtr;
+typedef std::unique_ptr<GetObjectResponse> GetObjectResponseAPtr;
 
 SWIG_AUTO_PTR_RELEASE(GetObjectResponse);
 

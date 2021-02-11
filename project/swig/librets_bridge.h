@@ -44,7 +44,7 @@ class InputStreamBridge
     istreamPtr  mInputStream;
 };
 
-typedef std::auto_ptr<InputStreamBridge> InputStreamBridgeAPtr;
+typedef std::unique_ptr<InputStreamBridge> InputStreamBridgeAPtr;
 
 class OutputStreamBridge
 {
@@ -61,7 +61,7 @@ class OutputStreamBridge
     ostreamPtr  mOutputStream;
 };
 
-typedef std::auto_ptr<OutputStreamBridge> OutputStreamBridgeAPtr;
+typedef std::unique_ptr<OutputStreamBridge> OutputStreamBridgeAPtr;
 
 };
 
