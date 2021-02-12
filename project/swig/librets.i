@@ -1011,7 +1011,7 @@ SWIG_AUTO_PTR_RELEASE(BinaryData);
     %typemap(out) BinaryDataAPtr (int size,
                                   const char* s,
                                   v8::Isolate* isolate,
-                                  v8::Handle<v8::Uint8Array> array) %{
+                                  v8::Local<v8::Uint8Array> array) %{
         s = ($1)->AsChar();
         size = ($1)->Size();
         isolate = v8::Isolate::GetCurrent();
