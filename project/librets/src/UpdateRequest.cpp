@@ -147,7 +147,7 @@ void UpdateRequest::SetUpdateType(string updateType)
     SetQueryParameter(UPDATE_TYPE_PARAMETER, mUpdateType);
 }
 
-const int UpdateRequest::GetValidateFlag()
+int UpdateRequest::GetValidateFlag()
 {
     return mFlag;
 }

@@ -139,7 +139,7 @@ class UpdateRequest : public RetsHttpRequest
      *
      * @return An integer representing the value of the validation flag.
      */
-    const int GetValidateFlag();
+    int GetValidateFlag();
     
     /**
      * Sets the validation flag for the current request.
