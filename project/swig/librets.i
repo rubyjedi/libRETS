@@ -1025,7 +1025,7 @@ SWIG_AUTO_PTR_RELEASE(BinaryData);
         // memory leaks of other methods.
         for (int i = 0; i < size; i++)
         {
-            array->Set(isolate->GetCurrentContext(), i, v8::Integer::NewFromUnsigned(isolate, s[i])).IsNothing();
+            array->Set(isolate->GetCurrentContext(), i, v8::Integer::NewFromUnsigned(isolate, s[i])).Check();
         }
 
         $result = array;
